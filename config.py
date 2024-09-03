@@ -49,7 +49,9 @@ class ConfigParser:
             f.close()
         return None
 
+    def keys(self): # キー一覧を返す
+        return self.config.keys()
 
-    def display_config(self):
+    def display_config(self): # 内容を見やすくコンソールに出力
         for key, value in self.config.items():
             print(f'{key}: {value}')
